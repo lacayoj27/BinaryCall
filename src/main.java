@@ -23,87 +23,112 @@ public class main {
     public static void main(String[] args) {
 
 
-        DisplayMenu Activate = new DisplayMenu();
-        Activate.displayM1();
+        BinaryConversion Activate = new BinaryConversion();
+        Activate.displayMenu();
+        Activate.responseFromMenu();
+        Activate.messageFromUser();
+
 
 
     }
 
 
 }
+
 
 class BinaryConversion {
 
-    Scanner input2 = new Scanner(System.in);
 
+    public static void displayMenu() {
 
-    public static long charForBinary(char fromOption) {
-
-        
-
-        if (fromOption == 'A') {
-
-            System.out.println("What would you like to type: ");
-
-        }
-
-        return 0;
+        System.out.println("-----------------------Binary Call----------------------------");
+        System.out.println("-------------------A.Convert text to binary-------------------");
+        System.out.println("-------------------B.Convert binary to text-------------------");
+        System.out.println("-------------------C.Exit Program-----------------------------");
 
 
     }
 
-
-}
-
-class DisplayMenu {
+    public static char responseFromMenu() {
 
 
-    BinaryConversion Activate1 = new BinaryConversion();
-
-    public static char displayM1() {
+        char optionPick;
 
 
         Scanner input1 = new Scanner(System.in);
-        boolean x = true;
-
-        while (x) {
-
-
-            char options;
+        System.out.println("Input: ");
+        optionPick = input1.next().charAt(0);
 
 
-            System.out.println("Binary Call");
-            System.out.println("A.Convert text to binary");
-            System.out.println("B.Convert binary to text");
-            System.out.println("C.Exit");
-            options = input1.next().charAt(0);
-
-            if (options == 'A') {
-
-
-
-
-                /*Ask what you would want to type
-                then convert to binary.
-                display in binary
-                display in text
-                Return to main menu
-
-                 */
-
-
-            }
-
-            if (options == 'C') {
-                x = false;
-
-            }
-
-
-        }
+        return optionPick;
 
 
     }
 
+    public static String messageFromUser() {
+
+        String Message1;
+
+        Scanner input2 = new Scanner(System.in);
+        System.out.println("Type in message your willing to convert to binary");
+        return Message1 = input2.nextLine();
+
+
+    }
+
+    public static void convertStringIntoBinary(String message)
+    {
+
+
+
+
+    }
+
+
+//    public static char displayM1() {
+//
+//
+//        Scanner input1 = new Scanner(System.in);
+//        boolean x = true;
+//
+//        while (x) {
+//
+//
+//            char options;
+//
+//
+//            System.out.println("Binary Call");
+//            System.out.println("A.Convert text to binary");
+//            System.out.println("B.Convert binary to text");
+//            System.out.println("C.Exit");
+//            options = input1.next().charAt(0);
+//
+//            if (options == 'A') {
+//
+//
+//
+//
+//                /*Ask what you would want to type
+//                then convert to binary.
+//                display in binary
+//                display in text
+//                Return to main menu
+//
+//                 */
+//
+//
+//            }
+//
+//            if (options == 'C') {
+//                x = false;
+//
+//            }
+//
+//
+//        }
+//
+//
+//    }
+//
 
 }
